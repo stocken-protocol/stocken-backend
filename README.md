@@ -22,6 +22,16 @@ src
 
 ## 🪐 Features
 
+### 🪐🚀 API Endpoints
+
+|Status|Category|Method|Endpoint|Description|
+|:---:|:---|:---|:---|:---|
+|🚧|Auth|GET|/auth/nonce|Generate nonce|
+|🚧|Auth|POST|/auth/verify|Verify|
+|🚧|User|GET|/user/:id|Get user by id|
+|🚧|User|POST|/user|Create user|
+|🚧|User|PUT|/user/:id|Update user|
+
 ## 🛰️ Getting Started
 
 Start DynamoDB container
