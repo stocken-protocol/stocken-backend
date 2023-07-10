@@ -1,5 +1,5 @@
-import { Nft } from '../domain/nftInterface'
+import { NftMetadata } from '../domain/nftInterface'
 
 export interface NftRepositoryInterface {
-  getById(id: string): Promise<Nft | null>
+  getById(id: string): Promise<NftMetadata | null>
 }

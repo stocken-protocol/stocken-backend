@@ -1,5 +1,5 @@
+import { NftMetadata } from '../domain/nftInterface'
 import { NftRepositoryInterface } from '../infrastructure/nftRepositoryInterface'
-import { Nft } from '../domain/nftInterface'
 
 export class NftAppService {
   nftRepository: NftRepositoryInterface
@@ -8,11 +8,12 @@ export class NftAppService {
     this.nftRepository = nftRepository
   }
 
-  getById(id: string): Promise<Nft | null> {
+  async getById(id: string): Promise<NftMetadata | null> {
     try {
-      return this.nftRepository.getById(id)
+      return await this.nftRepository.getById(id)
     } catch (error) {
       console.error('NftAppService: getById: ', error)
+      throw new Error(error)
     }
   }
 }

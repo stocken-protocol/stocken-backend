@@ -1,7 +1,8 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
 import { DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb'
-import { DYNAMO_DB_ENDPOINT } from '../constants/dynamoDb'
+
 import { AWS_REGION } from '../constants/aws'
+import { DYNAMO_DB_ENDPOINT } from '../constants/dynamoDb'
 
 export const getDynamoDBClient = (): DynamoDBClient => {
   const config = {
