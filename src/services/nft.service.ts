@@ -1,7 +1,7 @@
-import { NftMetadata } from '../domain/nftInterface'
-import { NftRepositoryInterface } from '../infrastructure/nftRepositoryInterface'
+import { NftMetadata } from '../domain/nft.interface'
+import { NftRepositoryInterface } from '../infrastructure/nft.repository-intarface'
 
-export class NftAppService {
+export class NftService {
   nftRepository: NftRepositoryInterface
 
   constructor(nftRepository: NftRepositoryInterface) {

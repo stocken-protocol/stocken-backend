@@ -6,23 +6,35 @@
 src
 ├ constants
 ├ controllers # Responsible for handling incoming HTTP requests
-│  └ xxxController.ts
+│  └ xxx.controller.ts
 ├ domain # Holds business logic, entities, and domain-specific data types
-│  └ xxxInterface.ts
+│  └ xxx.interface.ts
 ├ infrastructure # Contains classes and code related to infrastructure concerns
-│  ├ xxxRepository.ts
-│  └ xxxRepositoryInterface.ts
+│  ├ xxx.repository.ts
+│  └ xxx.repository-interface.ts
 ├ libs
 ├ routers # Defines the route handlers for different endpoints
-│  └ xxxRouters.ts
+│  └ xxx.routers.ts
 ├ services # Contains the application's business logic
-│  └ xxxAppService.ts
+│  └ xxx.service.ts
 └ handler.ts
 ```
 
 ## 🪐 Features
 
 ## 🛰️ Getting Started
+
+Start DynamoDB container
+
+```bash
+docker-cmpose up -d
+```
+
+Install packages
+
+```bash
+pnpm install
+```
 
 ## 🌌 Metadata Standards
 

@@ -2,7 +2,7 @@ import serverlessExpress from '@vendia/serverless-express'
 import cors from 'cors'
 import express from 'express'
 
-import { router as nftRouter } from './routers/nftRouters'
+import { router as nftRouter } from './routers/nft.router'
 
 const app = express()
 

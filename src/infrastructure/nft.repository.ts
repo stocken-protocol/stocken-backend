@@ -3,10 +3,10 @@ import type { DynamoDBClient, BatchGetItemCommandInput } from '@aws-sdk/client-d
 import type { DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb'
 
 import { DYNAMO_DB_TABLES } from '../constants/dynamoDb'
-import { NftMetadata, Attribute } from '../domain//nftInterface'
+import { NftMetadata, Attribute } from '../domain/nft.interface'
 import { getDynamoDBClient, geteDynamoDBDocumentClient } from '../libs/dynamoDBClient'
 
-import { NftRepositoryInterface } from './nftRepositoryInterface'
+import { NftRepositoryInterface } from './nft.repository-intarface'
 
 export class NftRepository implements NftRepositoryInterface {
   client: DynamoDBClient

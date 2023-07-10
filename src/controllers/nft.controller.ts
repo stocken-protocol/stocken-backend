@@ -1,10 +1,10 @@
 import { Request, Response } from 'express'
 
-import { NftRepository } from '../infrastructure/nftRepository'
-import { NftAppService } from '../services/nftAppService'
+import { NftRepository } from '../infrastructure/nft.repository'
+import { NftService } from '../services/nft.service'
 
 const nftRepository = new NftRepository()
-const nftAppService = new NftAppService(nftRepository)
+const nftAppService = new NftService(nftRepository)
 
 export const getById = async (req: Request, res: Response) => {
   try {
