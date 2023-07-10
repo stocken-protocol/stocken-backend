@@ -1,0 +1,48 @@
+service: stocken-backend
+frameworkVersion: '3'
+
+useDotenv: true
+
+package:
+  individually: true
+
+custom:
+  awsAccountId: 103609766378
+  esbuild:
+    bundle: true
+    minify: false
+    sourcemap: true
+    target: node18
+    define: {
+      require.resolve: undefined
+    }
+    platform: node
+    concurrency: 10
+    watch:
+      pattern: [src/**/*.ts]
+      ignore: [temp/**/*]
+  serverless-offline:
+    httpPort: 5000
+    lambdaPort: 5001
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  functionName:
+    handler: src/handler.handler
+    events:
+      - http:
+          method: ANY
+          path: "/"
+          cors: true
+      - http:
+          method: ANY
+          path: "/{any+}"
+          cors: true
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-esbuild
+  - serverless-offline
