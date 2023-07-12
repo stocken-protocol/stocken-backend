@@ -1,4 +1,4 @@
-import * as nftController from '../nft.controller'
+import * as nftController from '../user.controller'
 import { NftService } from '../../services/nft.service'
 
 // const mockResponse = () => {}

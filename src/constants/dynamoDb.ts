@@ -4,4 +4,7 @@ export const DYNAMO_DB_TABLES = {
   NFTS: {
     TABLE_NAME: 'Nfts',
   },
+  USERS: {
+    TABLE_NAME: 'Users',
+  },
 }

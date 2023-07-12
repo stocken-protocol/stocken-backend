@@ -28,7 +28,7 @@ src
 |:---:|:---|:---|:---|:---|
 |🚧|Auth|GET|/auth/nonce|Generate nonce|
 |🚧|Auth|POST|/auth/verify|Verify|
-|🚧|User|GET|/user/:id|Get user by id|
+|✅|User|GET|/user/:id|Get user by id|
 |🚧|User|POST|/user|Create user|
 |🚧|User|PUT|/user/:id|Update user|
 
